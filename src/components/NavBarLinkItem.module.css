@@ -1,0 +1,25 @@
+.navbarLinkItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+
+    transition: color 0.1s ease-out;
+    cursor: pointer;
+}
+
+
+.navbarLinkItem div {}
+
+.navbarLinkItem span {
+    height: 3px;
+    width: 0%;
+
+    transition: width 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.navbarLinkItem:hover span {
+    width: 100%;
+}
