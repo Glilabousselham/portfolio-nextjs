@@ -19,14 +19,11 @@ const Projects = async () => {
 
                 <SectionTitle>Projects</SectionTitle>
                 <div className={`
-                    p-2
-
                     grid grid-cols-1 gap-5
 
                     md:grid-cols-2
 
                     lg:grid-cols-3
-                    
                 `}>
                     {projectsState.map((p: any) => <ProjectItem key={p.id} item={p} />)}
                 </div>
@@ -43,10 +40,10 @@ function ProjectItem({ item }: { item: any }) {
 
         <Link href={"/projects/" + item.id} className={`
                     w-full bg-slate-800 rounded shadow-md shadow-slate-900
-                    p-3 flex flex-col gap-2 hover:scale-[1.01] cursor-pointer transition-all duration-200
+                    p-3 py-6 flex flex-col gap-2 hover:scale-[1.01] cursor-pointer transition-all duration-200
                 `}>
             <div className='flex justify-between'>
-                <div className='font-semibold text-sm'>{item.title}</div>
+                <div className='font-semibold text-md'>{item.title} sdlkahdh kasjfhkjasglf kjashld kjfaslkdjfhlaskjdfhlaksj</div>
 
             </div>
             {/* images */}

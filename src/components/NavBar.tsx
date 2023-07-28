@@ -5,6 +5,7 @@ import { RiMenu4Fill } from "react-icons/ri"
 import { MdClose } from "react-icons/md"
 
 import { useEffect, WheelEvent } from 'react'
+import { useRouter } from 'next/navigation'
 
 const NavItems = [
 
@@ -66,12 +67,14 @@ const NavBar = () => {
     const [menu, setMenu] = useState(false);
     const toggle = () => setMenu(!menu)
 
+    const router = useRouter()
+
     return (
-        <header className={`${show ? "mt-0" : "-mt-14"} bg-gradient-to-tr from-slate-900 to-slate-700 transition-all duration-300 h-14 flex flex-col justify-center fixed w-full max-w-screen-xl px-4`}>
+        <header className={`${show ? "mt-0" : "-mt-14"} z-10 bg-gradient-to-tr from-slate-900 to-slate-700 transition-all duration-300 h-14 flex flex-col justify-center fixed w-full max-w-screen-xl px-4`}>
             {/*  */}
             <nav className='flex items-center justify-between w-full'>
                 {/* logo */}
-                <div className='text-2xl font-bold text-blue-600'>BG</div>
+                <div className='text-2xl font-bold text-blue-600' onClick={() => router.push("/")}>BG</div>
 
                 {/* links */}
                 <div className='hidden md:flex items-center justify-between space-x-4'>
@@ -95,7 +98,7 @@ const NavBar = () => {
                 fixed top-0 right-0 w-screen h-screen
                 flex flex-col items-center justify-center space-y-5
                 bg-slate-900 
-                ${menu ? "mt-0" : "h-0 opacity-0"}
+                ${menu ? "mt-0" : "h-0 -mt-[1000px] opacity-0"}
                         text-2xl
                 `}>
 
