@@ -49,7 +49,7 @@ const ProjectPage = async (props: ProjectPageProps) => {
                     <div className='flex flex-wrap whitespace-break-spaces gap-3 text-sm underline text-blue-300'>
                         {project.techs.map((tech: string) => {
                             return (
-                                <div>{tech}</div>
+                                <div key={tech}>{tech}</div>
                             )
                         })}
                     </div>
