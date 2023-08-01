@@ -15,7 +15,7 @@ const Projects = async () => {
 
     return (
         <>
-            <div id='projects' className={`min-h-screen pt-[100px] pb-5 px-4`}>
+            <div id='projects' className={`py-[100px] pb-5 px-4`}>
 
                 <SectionTitle>Projects</SectionTitle>
                 <div className={`
@@ -43,7 +43,7 @@ function ProjectItem({ item }: { item: any }) {
                     p-3 py-6 flex flex-col gap-2 hover:scale-[1.01] cursor-pointer transition-all duration-200
                 `}>
             <div className='flex justify-between'>
-                <div className='font-semibold text-md'>{item.title} sdlkahdh kasjfhkjasglf kjashld kjfaslkdjfhlaskjdfhlaksj</div>
+                <div className='font-semibold text-md'>{item.title} </div>
 
             </div>
             {/* images */}

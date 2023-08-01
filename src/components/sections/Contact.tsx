@@ -7,7 +7,7 @@ const Contact = () => {
 
 
     return (
-        <div id='contact' className={`min-h-screen pt-[100px] px-4 `}>
+        <div id='contact' className={`py-[100px] px-4 `}>
 
             <SectionTitle>Contact</SectionTitle>
             <div className='grid md:grid-cols-2 gap-4' dir='rtl'>
