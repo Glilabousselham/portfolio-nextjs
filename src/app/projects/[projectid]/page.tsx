@@ -3,6 +3,8 @@ import React from 'react'
 import ProjectImagesSlider from "@/components/ProjectImagesSlider";
 import Link from 'next/link';
 import { projects } from '@/data/projects';
+import { redirect } from 'next/navigation';
+
 
 interface ProjectPageProps {
     params: {
@@ -14,15 +16,12 @@ const ProjectPage = async (props: ProjectPageProps) => {
 
     const projectid = props.params.projectid
 
-
-
-
     const project = projects.find((p: any) => {
         return +p.id === +projectid
     });
 
     if (!project) {
-        throw new Error("Project not found")
+        redirect("/")
     }
 
     return (
