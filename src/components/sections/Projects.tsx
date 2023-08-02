@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { BsExclamationCircle } from 'react-icons/bs'
+import React from 'react'
+
 import SectionTitle from '../SectionTitle';
 import Link from 'next/link';
+import { projects } from '@/data/projects';
 
 
 
@@ -9,7 +10,6 @@ const Projects = async () => {
 
 
 
-    const projectsState = await fetch(process.env.APP_URL + "/data/projects.json").then(res => res.json())
 
 
 
@@ -25,7 +25,7 @@ const Projects = async () => {
 
                     lg:grid-cols-3
                 `}>
-                    {projectsState.map((p: any) => <ProjectItem key={p.id} item={p} />)}
+                    {projects.map((p: any) => <ProjectItem key={p.id} item={p} />)}
                 </div>
             </div>
         </>
@@ -43,7 +43,7 @@ function ProjectItem({ item }: { item: any }) {
                     p-3 py-6 flex flex-col gap-2 hover:scale-[1.01] cursor-pointer transition-all duration-200
                 `}>
             <div className='flex justify-between'>
-                <div className='font-semibold text-md'>{item.title} </div>
+                <div className='font-semibold text-md'>{item.title}</div>
 
             </div>
             {/* images */}

@@ -1,9 +1,8 @@
 
-import { PageNotFoundError } from 'next/dist/shared/lib/utils';
-import Image from 'next/image';
 import React from 'react'
 import ProjectImagesSlider from "@/components/ProjectImagesSlider";
 import Link from 'next/link';
+import { projects } from '@/data/projects';
 
 interface ProjectPageProps {
     params: {
@@ -17,7 +16,6 @@ const ProjectPage = async (props: ProjectPageProps) => {
 
 
 
-    const projects = await fetch(process.env.APP_URL + "/data/projects.json").then(res => res.json());
 
     const project = projects.find((p: any) => {
         return +p.id === +projectid
