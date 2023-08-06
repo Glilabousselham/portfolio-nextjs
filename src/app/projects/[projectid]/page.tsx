@@ -59,6 +59,7 @@ const ProjectPage = async (props: ProjectPageProps) => {
 
 export default ProjectPage
 
+
 export async function generateStaticParams() {
 
     return projects.map((p) => ({
