@@ -63,6 +63,6 @@ export default ProjectPage
 export async function generateStaticParams() {
 
     return projects.map((p) => ({
-        projectid: p.id,
+        projectid: +p.id,
     }))
 }
