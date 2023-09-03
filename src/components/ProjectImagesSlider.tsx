@@ -13,7 +13,7 @@ const ProjectImagesSlider = ({ items }: { items: string[] }) => {
         >
 
             {items.map((image: string) => (
-                <img key={image} className="max-h-[350px] w-full object-contain" src={image} alt='project image' />
+                <img key={image} className="max-h-[500px] w-full  object-contain" src={image} alt='project image' />
             ))}
         </Carousel>
 

@@ -1,9 +1,7 @@
 import NavBar from '@/components/NavBar'
-import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import AnimatedBackground from '@/components/animated-background/AnimatedBackground'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Bousselham Glila - Portfolio',
@@ -26,9 +24,13 @@ export default function RootLayout({
 
         <meta name="googlebot" content="index, follow" />
       </head>
-      <body className={`${inter.className} text-md bg-gradient-to-tr from-slate-950 to-slate-800 text-blue-100 `}>
+      <body className={`text-md bg-gradient-to-tr from-black to-slate-950 text-blue-100 `}>
 
-        <div className='max-w-screen-xl min-h-screen mx-auto '>
+
+        {/* animated background  */}
+        <AnimatedBackground />
+
+        <div className='max-w-screen-xl z-1 min-h-screen mx-auto position-relative'>
           <NavBar />
 
           <main>

@@ -70,14 +70,18 @@ const NavBar = () => {
     const router = useRouter()
 
     return (
-        <header className={`${show ? "mt-0" : "-mt-14"} z-10 bg-gradient-to-tr from-slate-900 to-slate-700 transition-all duration-300 h-14 flex flex-col justify-center fixed w-full max-w-screen-xl px-4`}>
+        <header
+            className={`${show ? "mt-0" : "-mt-14"} z-10 
+            transition-all duration-300 bg-black
+            h-14 flex flex-col justify-center fixed left-0 w-full  px-4`}
+        >
             {/*  */}
-            <nav className='flex items-center justify-between w-full'>
+            <nav className='flex items-center justify-between mx-auto max-w-screen-xl w-full'>
                 {/* logo */}
                 <div className='text-2xl font-bold text-blue-600' onClick={() => router.push("/")}>BG</div>
 
                 {/* links */}
-                <div className='hidden md:flex items-center justify-between space-x-4'>
+                <div className='hidden md:flex items-center  justify-between space-x-4'>
                     {NavItems.map(navItem => (
                         <NavBarLinkItem sectionId={navItem.sectionId} key={navItem.name}>{navItem.name}</NavBarLinkItem>
                     ))}

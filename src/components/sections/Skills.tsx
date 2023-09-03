@@ -96,9 +96,9 @@ const Skills = () => {
                 `}>
 
                 {skillsArray.map((skill, index) => (
-                    <div key={index} className='bg-slate-800 rounded flex gap-1 flex-col items-center  p-2'>
-                        <div className='text-6xl'>{skill.icon}</div>
-                        <div>{skill.name}</div>
+                    <div key={index} className='bg-black text-blue-300 rounded flex gap-1 flex-col items-center p-2 py-3'>
+                        <div className='text-5xl'>{skill.icon}</div>
+                        <div className='font-bold'>{skill.name}</div>
                     </div>
                 ))}
 
